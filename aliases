@@ -1,10 +1,9 @@
 #Aliases
 alias aliases="vim ~/.aliases"
-alias tmux="tmux -2"
 alias vrc="vim ~/.vimrc"
 alias zrc="vim ~/.zshrc"
 alias tconf="vim ~/.tmux.conf"
 alias py="python3"
+alias notes="vim ~/.notes.md"
 
 #Named Directories
-hash -d iris="/home/brian/projects/machine_learning/iris"
