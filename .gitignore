@@ -1,0 +1,2 @@
+# exclude named_dirs, since they are specific to my machine
+named_dirs
