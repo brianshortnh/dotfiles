@@ -1,9 +1,26 @@
-#Aliases
-alias aliases="vim ~/.aliases"
-alias vrc="vim ~/.vimrc"
-alias zrc="vim ~/.zshrc"
-alias tconf="vim ~/.tmux.conf"
+#Program Aliases
 alias py="python3"
-alias notes="vim ~/.notes.md"
 
-#Named Directories
+#Dotfile Aliases
+alias aliases="vim ~/.aliases"
+alias salias="source ~/.aliases"
+
+alias ndirs="vim ~/.named_dirs"
+alias sndirs="source ~/.named_dirs"
+
+alias vrc="vim ~/.vimrc"
+alias svrc="source ~/.vimrc"
+
+alias zrc="vim ~/.zshrc"
+alias szrc="source ~/.zshrc"
+
+alias tconf="vim ~/.tmux.conf"
+alias stconf="source ~/.tmux.conf"
+
+alias gitc="vim ~/.gitconfig"
+alias sgitc="source ~/.gitconfig"
+
+alias .env="vim ~/.environment"
+alias s.env="source ~/.environment"
+
+alias notes="vim ~/.notes.md"

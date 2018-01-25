@@ -7,7 +7,7 @@ h
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="vimrc zshrc aliases tmux.conf"    # list of files/folders to symlink
+files="vimrc zshrc aliases tmux.conf named_dirs"    # list of files/folders to symlink
 
 ##########
 
