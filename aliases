@@ -1,5 +1,18 @@
 #Program Aliases
 alias py="python3"
+alias alog="tail -f ~mlogs/apache_access.log | cut -d' ' -f4-10"
+alias plog="tail -f ~mlogs/php_error.log"
+alias qlog="tail -f ~mlogs/mysql_error_log.err"
+alias awk="gawk"
+alias tkills="tmux kill-session -t"
+alias tkillw="tmux kill-window -t"
+alias dog="cat"
+alias grl="grep -lR"
+alias grn="grep -nR"
+alias grli="grep -lRi"
+alias grep="ggrep"
+alias phpx="php -d xdebug.profiler_enable=1"
+alias ls="gls --color=auto --group-directories-first"
 
 #Dotfile Aliases
 alias aliases="vim ~/.aliases"
@@ -9,18 +22,18 @@ alias ndirs="vim ~/.named_dirs"
 alias sndirs="source ~/.named_dirs"
 
 alias vrc="vim ~/.vimrc"
-alias svrc="source ~/.vimrc"
 
 alias zrc="vim ~/.zshrc"
 alias szrc="source ~/.zshrc"
 
+alias envo="vim ~/.environment"
+
 alias tconf="vim ~/.tmux.conf"
-alias stconf="source ~/.tmux.conf"
 
 alias gitc="vim ~/.gitconfig"
 alias sgitc="source ~/.gitconfig"
 
-alias .env="vim ~/.environment"
-alias s.env="source ~/.environment"
-
 alias notes="vim ~/.notes.md"
+
+alias phpini="vim /Applications/MAMP/bin/php/php7.0.16/conf/php.ini"
+alias phpini2="vim /Applications/MAMP/conf/php7.0.16/php.ini"

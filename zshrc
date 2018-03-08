@@ -2,16 +2,18 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/brian/.oh-my-zsh
-  
-  export TERM=xterm-256color
-  source $HOME/.environment
-  source $HOME/.aliases
-  source $HOME/.named_dirs
+# Environment variables have been moved to ~/.env
+plugins=(git brew vi-mode)
+ZSH_THEME="agnoster"
+
+source $ZSH/oh-my-zsh.sh
+source $HOME/.environment
+source $HOME/.aliases
+source $HOME/.named_dirs
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -62,9 +64,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
