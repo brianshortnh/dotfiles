@@ -1,2 +1,5 @@
 # exclude named_dirs, since they are specific to my machine
+# also environment
 named_dirs
+environment
+*.orig
