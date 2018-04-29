@@ -1,16 +1,19 @@
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=/usr/local/opt/fzf
 call vundle#begin()
 
 "Plugins
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Chiel92/vim-autoformat'
+Plugin 'ervandew/supertab'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'Buffergator'
 Plugin 'itchyny/lightline.vim'
 Plugin 'tpope/vim-fugitive.git'
 Plugin 'tpope/vim-surround.git'
+"Plugin 'vim-syntastic/syntastic'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'linediff.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -19,6 +22,10 @@ Plugin 'joonty/vdebug'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'benmills/vimux'
 Plugin 'gregsexton/gitv'
+Plugin 'StanAngeloff/php.vim'
+Plugin 'rayburgemeestre/phpfolding.vim'
+Plugin '2072/PHP-Indenting-for-Vim'
+Plugin 'fatih/vim-go.git', { 'do': ':GoUpdateBinaries' }
 Bundle 'joonty/vim-phpqa.git'
 Bundle 'stephpy/vim-php-cs-fixer'
 
@@ -28,7 +35,7 @@ colorscheme afterglow
 
 "Settings
 set guifont=DejaVuSansMono
-set colorcolumn=90
+set colorcolumn=80
 set number
 set hidden
 set history=100
@@ -62,6 +69,9 @@ autocmd StdinReadPre * let s:std_in=1
 syntax on
 autocmd Filetype gitcommit setlocal spell textwidth=72
 "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+"Set spelling for Markdown
+autocmd Filetype markdown setlocal spell
 
 "Map leader to space
 let mapleader=" "
@@ -99,17 +109,23 @@ let NERDTreeDirArrows = 1
 
 "VDebug and PHPQA settings
 let g:vdebug_features = { 'max_children': 128 }
-let g:phpqa_messdetector_ruleset = '/Applications/MAMP/bin/php/php7.0.16/lib/php/data/PHP_PMD/resources/rulesets/cleancode.xml'
-let g:phpqa_codesniffer_args = '--standard=Zend'
-let g:phpqa_messdetector_autorun = 0
-let g:phpqa_codesniffer_autorun = 0
+let g:phpqa_messdetector_ruleset = '/Applications/MAMP/bin/php/php7.0.16/lib/php/data/PHP_PMD/resources/rulesets/unusedcode.xml'
+let g:phpqa_codesniffer_args = '--standard=PSR2'
+let g:phpqa_messdetector_autorun = 1
+let g:phpqa_codesniffer_autorun = 1
 let g:phpqa_codecoverage_autorun = 1
+
+"PHP-indent settings
+let g:PHP_vintage_case_default_indent = 1
 
 "CtrlP settings
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+let g:ctrlp_match_window = 'max:20,results:30'
 let g:ctrlp_working_path_mode = 'rw'
 let g:ctrlp_switch_buffer = 'et'
+nnoremap <leader>. :CtrlPTag<CR>
 set wildignore+=*/devops/*,*/node_modules/*,*.swp
 
 "Vim-php-cs-fixer settings

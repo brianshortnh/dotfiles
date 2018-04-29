@@ -13,6 +13,8 @@ alias grli="grep -lRi"
 alias grep="ggrep"
 alias phpx="php -d xdebug.profiler_enable=1"
 alias ls="gls --color=auto --group-directories-first"
+alias hg="history | grep"
+alias pu="./vendor/bin/phpunit"
 
 #Dotfile Aliases
 alias aliases="vim ~/.aliases"

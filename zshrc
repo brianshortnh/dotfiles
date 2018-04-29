@@ -8,6 +8,7 @@ ZSH_THEME="agnoster"
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.environment
+source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
 source $HOME/.named_dirs
 
