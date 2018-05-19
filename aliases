@@ -12,6 +12,7 @@ alias grn="grep -nR"
 alias grli="grep -lRi"
 alias grep="ggrep"
 alias phpx="php -d xdebug.profiler_enable=1"
+#remove if not on Mac
 alias ls="gls --color=auto --group-directories-first"
 alias hg="history | grep"
 alias pu="./vendor/bin/phpunit"
@@ -26,7 +27,6 @@ alias sndirs="source ~/.named_dirs"
 alias vrc="vim ~/.vimrc"
 
 alias zrc="vim ~/.zshrc"
-alias szrc="source ~/.zshrc"
 
 alias envo="vim ~/.environment"
 

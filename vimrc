@@ -13,7 +13,6 @@ Plugin 'Buffergator'
 Plugin 'itchyny/lightline.vim'
 Plugin 'tpope/vim-fugitive.git'
 Plugin 'tpope/vim-surround.git'
-"Plugin 'vim-syntastic/syntastic'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'linediff.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -68,7 +67,6 @@ autocmd StdinReadPre * let s:std_in=1
 "Set spelling and syntax for git commits
 syntax on
 autocmd Filetype gitcommit setlocal spell textwidth=72
-"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 "Set spelling for Markdown
 autocmd Filetype markdown setlocal spell
@@ -101,7 +99,7 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 "Whitespace highlighting
 highlight BadWhiteSpace ctermbg=red guibg=darkred
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhiteSpace /\s\+$/
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h,*.php,*.js match BadWhiteSpace /\s\+$/
 
 "NERDTree settings
 let NERDTreeMinimalUI = 1
