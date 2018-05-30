@@ -15,7 +15,6 @@ Plugin 'tpope/vim-fugitive.git'
 Plugin 'tpope/vim-surround.git'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'linediff.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'pangloss/vim-javascript.git'
 Plugin 'joonty/vdebug'
 Plugin 'christoomey/vim-tmux-navigator'
@@ -107,7 +106,7 @@ let NERDTreeDirArrows = 1
 
 "VDebug and PHPQA settings
 let g:vdebug_features = { 'max_children': 128 }
-let g:phpqa_messdetector_ruleset = '/Applications/MAMP/bin/php/php7.0.16/lib/php/data/PHP_PMD/resources/rulesets/unusedcode.xml'
+let g:phpqa_messdetector_ruleset = '~/.rulesets/unusedcode.xml'
 let g:phpqa_codesniffer_args = '--standard=PSR2'
 let g:phpqa_messdetector_autorun = 1
 let g:phpqa_codesniffer_autorun = 1
